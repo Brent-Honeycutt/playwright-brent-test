@@ -2,8 +2,7 @@ import { test, expect } from '@playwright/test';
 import { click } from '@testing-library/user-event/dist/click';
 
 test.beforeEach(async ({ page }) => {
-  await page.goto('http://localhost:3000/');
-  //page.on('console', msg => console.log(msg.text()))
+  await page.goto('http://127.0.0.1:3000/');
 });
 
 const VALID_USERNAMES = [
@@ -45,11 +44,3 @@ test('allows a user to register with valid credentials and logs the submitted da
   await expect(consoleLogs).toContain('Name: ' + [VALID_USERNAMES[0]] + '\nEmail: ' + [VALID_EMAILS[0]] + '\nPassword: ' + [VALID_PASSWORDS[0]]);
 });
 
-// test('get started link', async ({ page }) => {
-
-//   // Click the get started link.
-//   await page.getByRole('link', { name: 'Get started' }).click();
-
-//   // Expects the URL to contain intro.
-//   await expect(page).toHaveURL(/.*intro/);
-// });
