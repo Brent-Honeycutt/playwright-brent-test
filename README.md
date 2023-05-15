@@ -10,7 +10,7 @@ To get started with this project, please follow the steps below:
 
 1.  Clone the repository to your local machine:
 
-`git clone https://github.com/your-username/playwright-react-showcase.git`
+`git clone https://github.com/Brent-Honeycutt/playwright-react-showcase.git`
 
 
 2.  Navigate into the project directory:
